@@ -121,7 +121,7 @@ class FaceBoxes_ONNX(object):
         scores = scores[order]
 
         # do NMS
-        dets = np.hstack((boxes, scores[:, np.newaxis])).astype(np.float32, copy=False)
+        dets = np.hstack((boxes, scores[:, np.newaxis])).astype(int, copy=False)  # Replace np.float32 with int
         keep = nms(dets, nms_threshold)
         dets = dets[keep, :]
 
