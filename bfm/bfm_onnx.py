@@ -55,7 +55,7 @@ class BFMModel_ONNX(nn.Module):
         # w_exp = _to_tensor(bfm.get('w_exp').astype(np.float32)[..., :exp_dim])
         # self.w = torch.cat((w_shp, w_exp), dim=1)
 
-        # self.keypoints = bfm.get('keypoints').astype(np.long)  # fix bug
+        # self.keypoints = bfm.get('keypoints').astype(np.longlong)  # fix bug
         # self.u_base = self.u[self.keypoints].reshape(-1, 1)
         # self.w_shp_base = self.w_shp[self.keypoints]
         # self.w_exp_base = self.w_exp[self.keypoints]
