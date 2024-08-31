@@ -15,5 +15,5 @@ def nms(dets, thresh):
 
     if dets.shape[0] == 0:
         return []
-    return cpu_nms(dets, thresh)
+    return py_cpu_nms(dets, thresh)
     # return gpu_nms(dets, thresh)
